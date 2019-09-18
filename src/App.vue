@@ -1,5 +1,5 @@
 <template>
-  <v-app light class="white" id="app">
+  <v-app dark class="black" id="app">
     <v-flex class="pa-5" style="font-size: 2em; position: absolute; top: 0; left: 0; z-index: 999;">
       <h1>
       <v-avatar size="80" class="hidden-sm-and-down pink mb-3 mr-3">
@@ -9,7 +9,7 @@
         <img src="https://www.upwork.com/profile-portraits/c18GQ_SazI15TjBtgsPQevIocCzc7uI0SFZvk3saSug-1lVso7zW6rbpyCqWaV7uj0?1557003397602">
       </v-avatar>
       <i>Nikita K.</i></h1>
-      <p><v-icon large class="hidden-sm-and-down black--text mb-1 mr-2">location_on</v-icon><v-icon class="hidden-md-and-up mr-1">location_on</v-icon>Rockville, MD</p>
+      <p><v-icon large class="hidden-sm-and-down white--text mb-1 mr-2">location_on</v-icon><v-icon class="hidden-md-and-up mr-1">location_on</v-icon>Rockville, MD</p>
     </v-flex>
 
     <v-flex md4 lg3 class="pa-3 hidden-sm-and-down" style="font-size: 2em; position: fixed; bottom:0; right: 0; z-index: 1;">
@@ -17,13 +17,14 @@
         <v-btn block round flat class="link link--kukuri" v-scroll-to="{el:'#info', offset: 0}"><v-spacer></v-spacer>Info</v-btn>
         <v-btn block round flat class="link link--kukuri" v-scroll-to="{el:'#work', offset: 0}"><v-spacer></v-spacer>Work</v-btn>
         <v-btn block round flat class="link link--kukuri" v-scroll-to="{el:'#contact', offset: 0}"><v-spacer></v-spacer>Contact</v-btn>
+        <v-btn block round flat class="link link--kukuri" v-scroll-to="{el:'#picture', offset: 0}"><v-spacer></v-spacer>Picture</v-btn>
       </v-layout>
     </v-flex>
 
     <v-btn fixed bottom right class="hidden-md-and-up pink white--text" fab><v-icon>menu</v-icon></v-btn>
 
     <v-layout column id="info" class="height" style="background: -webkit-linear-gradient(to right, #232526, #414345); z-index: 0;">
-      <span class="hidden-sm-and-down my-auto mx-auto" style="font-size: 3em; text-shadow: 0 0 1em white">Fullstack
+      <span class="hidden-sm-and-down my-auto mx-auto" style="font-size: 3em; text-shadow: 0 0 1em #000">Fullstack
         <h1 style="z-index: 1">Web Developer</h1>
       </span>
       <h1 style="z-index: 1; font-size: 2em;  text-shadow: 0 0 1em white; text-align: center;" class="hidden-md-and-up my-auto mx-auto">Fullstack Web Developer</h1>
@@ -31,14 +32,30 @@
 
     <v-flex class="height pa-5" id="work">
       <v-flex class="pa-5" style="font-size: 2em; position: absolute; top: 100vh; left: 0; z-index: 1;">
-        <h1><span class="pink--text">1/4</span> Savvy Tech LLC</h1>
+        <h1><span class="pink--text">1/5</span> Enly Shop</h1>
+        <p>E-commerse website</p>
+      </v-flex>
+
+      <v-flex xs12 md10 offset-md1 lg6 offset-lg3 style="margin-top: 50vh; transform: translateY(-50%);">
+        <v-img class="tilt hidden-sm-and-down round2 mx-auto" aspect-raito="1.7888" src="enly.shop.png">
+          <v-layout column class="hover fill-height" style="background: #2225;">
+            <v-btn target="_blank" href="https://enly.shop" large class="my-auto mx-auto" flat fab><v-icon large>remove_red_eye</v-icon></v-btn>
+          </v-layout>
+        </v-img>
+        <v-img v-ripple class="hidden-md-and-up round2 mx-auto" aspect-raito="1.7888" src="enly.shop-mobile.png" style="max-height: 70vh;"></v-img>
+      </v-flex>
+    </v-flex>
+
+    <v-flex class="height pa-5">
+      <v-flex class="pa-5" style="font-size: 2em; position: absolute; top: 200vh; left: 0; z-index: 1;">
+        <h1><span class="pink--text">2/5</span> Savvy Tech LLC</h1>
         <p>Company website, old version</p>
       </v-flex>
 
       <v-flex xs12 md10 offset-md1 lg6 offset-lg3 style="margin-top: 50vh; transform: translateY(-50%);">
         <v-img class="tilt hidden-sm-and-down round2 mx-auto" aspect-raito="1.7888" src="savvy-tech.png">
           <v-layout column class="hover fill-height" style="background: #2225;">
-            <v-btn target="_blank" href="https://savvy-tech.firebaseapp.com" large class="my-auto mx-auto white white--text" flat fab><v-icon large>remove_red_eye</v-icon></v-btn>
+            <v-btn target="_blank" href="https://savvy-tech.firebaseapp.com" large class="my-auto mx-auto" flat fab><v-icon large>remove_red_eye</v-icon></v-btn>
           </v-layout>
         </v-img>
         <v-img v-ripple class="hidden-md-and-up round2 mx-auto" aspect-raito="1.7888" src="savvy-tech-mobile.png" style="max-height: 70vh;"></v-img>
@@ -46,15 +63,15 @@
     </v-flex>
 
     <v-flex class="height pa-5">
-      <v-flex class="pa-5" style="font-size: 2em; position: absolute; top: 200vh; left: 0; z-index: 1;">
-        <h1><span class="pink--text">2/4</span> Savvy Tech Enly</h1>
+      <v-flex class="pa-5" style="font-size: 2em; position: absolute; top: 300vh; left: 0; z-index: 1;">
+        <h1><span class="pink--text">3/5</span> Savvy Tech Enly</h1>
         <p>Company website, v2.0</p>
       </v-flex>
 
       <v-flex xs12 md10 offset-md1 lg6 offset-lg3 style="margin-top: 50vh; transform: translateY(-50%);">
         <v-img class="tilt hidden-sm-and-down round2 mx-auto" aspect-raito="1.7888" src="savvy-enly.png">
           <v-layout column class="hover fill-height" style="background: #2225;">
-            <v-btn target="_blank" href="https://savvy-enly.firebaseapp.com" large class="my-auto mx-auto white white--text" flat fab><v-icon large>remove_red_eye</v-icon></v-btn>
+            <v-btn target="_blank" href="https://savvy-enly.firebaseapp.com" large class="my-auto mx-auto" flat fab><v-icon large>remove_red_eye</v-icon></v-btn>
           </v-layout>
         </v-img>
         <v-img v-ripple class="hidden-md-and-up round2 mx-auto" aspect-raito="1.7888" src="savvy-enly-mobile.png" style="max-height: 70vh;"></v-img>
@@ -62,8 +79,8 @@
     </v-flex>
 
     <v-flex class="height pa-5">
-      <v-flex class="pa-5" style="font-size: 2em; position: absolute; top: 300vh; left: 0; z-index: 1;">
-        <h1><span class="pink--text">3/4</span> Enly MVP</h1>
+      <v-flex class="pa-5" style="font-size: 2em; position: absolute; top: 400vh; left: 0; z-index: 1;">
+        <h1><span class="pink--text">4/5</span> Enly MVP</h1>
         <p>MVP for mobile fashion app.</p>
       </v-flex>
 
@@ -71,7 +88,7 @@
         <v-img class="tilt hidden-sm-and-down round2 mx-auto" aspect-raito="1.7888" src="enly.png">
           <v-layout column class="hover fill-height" style="background: #2225;">
             <h1 class="hidden-sm-and-down mx-auto my-auto pink"> Mobile view only</h1>
-            <v-btn target="_blank" href="https://enly-app.firebaseapp.com" large class="hidden-md-and-up my-auto mx-auto white white--text" flat fab><v-icon large>remove_red_eye</v-icon></v-btn>
+            <v-btn target="_blank" href="https://enly-app.firebaseapp.com" large class="hidden-md-and-up my-auto mx-auto" flat fab><v-icon large>remove_red_eye</v-icon></v-btn>
           </v-layout>
         </v-img>
         <v-img v-ripple class="hidden-md-and-up round2 mx-auto" aspect-raito="1.7888" src="enly-mobile.png" style="max-height: 70vh;"></v-img>
@@ -79,15 +96,15 @@
     </v-flex>
 
     <v-flex class="height pa-5">
-      <v-flex class="pa-5" style="font-size: 2em; position: absolute; top: 400vh; left: 0; z-index: 1;">
-        <h1><span class="pink--text">4/4</span> Tuts Tree</h1>
+      <v-flex class="pa-5" style="font-size: 2em; position: absolute; top: 500vh; left: 0; z-index: 1;">
+        <h1><span class="pink--text">5/5</span> Tuts Tree</h1>
         <p>Web-Dev teaching website</p>
       </v-flex>
 
       <v-flex xs12 md10 offset-md1 lg6 offset-lg3 style="margin-top: 50vh; transform: translateY(-50%);">
         <v-img class="tilt hidden-sm-and-down round2 mx-auto" aspect-raito="1.7888" src="tuts-tree.png">
           <v-layout column class="hover fill-height" style="background: #2225;">
-            <v-btn target="_blank" href="https://tuts-tree.firebaseapp.com" large class="my-auto mx-auto white white--text" flat fab><v-icon large>remove_red_eye</v-icon></v-btn>
+            <v-btn target="_blank" href="https://tuts-tree.firebaseapp.com" large class="my-auto mx-auto" flat fab><v-icon large>remove_red_eye</v-icon></v-btn>
           </v-layout>
         </v-img>
         <v-img v-ripple class="hidden-md-and-up round2 mx-auto" aspect-raito="1.7888" src="tuts-tree-mobile.png" style="max-height: 70vh;"></v-img>
@@ -95,7 +112,7 @@
     </v-flex>
 
     <v-flex class="height" id="contact">
-      <v-flex class="pa-5" style="font-size: 2em; position: absolute; top: 500vh; left: 0; z-index: 1;">
+      <v-flex class="pa-5" style="font-size: 2em; position: absolute; top: 600vh; left: 0; z-index: 1;">
         <h1><v-icon size="60" left class="hidden-sm-and-down mb-2 pink--text">pets</v-icon><v-icon size="30" class="hidden-md-and-up mb-1 mr-1 pink--text">pets</v-icon>Contact</h1>
         <p>Open to offers</p>
       </v-flex>
@@ -112,7 +129,7 @@
           </v-avatar>
         </a>
         <a target="_blank" class="mx-auto" href="https://github.com/PickleNik">
-          <v-avatar v-ripple size="300" class="white scale">
+          <v-avatar v-ripple size="300" class="black scale">
             <img src="https://magentys.io/wp-content/uploads/2017/04/github-logo-1.png">
           </v-avatar>
         </a>
@@ -134,6 +151,19 @@
           </v-avatar>
         </a>
       </v-layout>
+    </v-flex>
+
+    <v-flex class="height pa-5" id="picture">
+      <v-flex class="pa-5" style="font-size: 2em; position: absolute; top: 700vh; left: 0; z-index: 1;">
+        <h1><v-icon size="60" left class="hidden-sm-and-down mb-2 pink--text">photo</v-icon><v-icon size="30" class="hidden-md-and-up mb-1 mr-1 pink--text">pets</v-icon>Picture</h1>
+        <p>National Geographic</p>
+      </v-flex>
+
+      <v-flex xs12 md10 offset-md1 lg6 offset-lg3 style="margin-top: 50vh; transform: translateY(-50%);">
+        <v-img class="tilt hidden-sm-and-down round2 mx-auto" contain aspect-raito="1" src="ngnikita.jpg" style="max-height: 70vh;">
+        </v-img>
+        <v-img v-ripple class="hidden-md-and-up round2 mx-auto" contain aspect-raito="1.7888" src="ngnikita.jpg" style="max-height: 70vh;"></v-img>
+      </v-flex>
     </v-flex>
 
   </v-app>
@@ -175,7 +205,7 @@ export default {
 <style media="screen">
   @import url('https://fonts.googleapis.com/css?family=Montserrat:900');
   * {
-    font-family: 'Montserrat'; color: #444;
+    font-family: 'Montserrat'; color: #eee;
   }
   @media only screen and (max-width: 960px) {
     h1 {
